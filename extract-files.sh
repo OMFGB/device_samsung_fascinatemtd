@@ -66,4 +66,4 @@ PRODUCT_COPY_FILES += \
 
 EOF
 
-
+./setup-makefiles.sh
