@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES := \\
 DEVICE_PACKAGE_OVERLAYS := vendor/$MANUFACTURER/aries-common/overlay
 
 \$(call inherit-product, vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk)
-\$(call inherit-product, vendor/$MANUFACTURER/aries-common/aries-vendor-blobs.mk)
+\$(call inherit-product-if-exist, vendor/$MANUFACTURER/aries-common/aries-vendor-blobs.mk)
 EOF
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/BoardConfigVendor.mk
