@@ -192,6 +192,7 @@ PRODUCT_COPY_FILES += \
 # of the aspects that require proprietary drivers that aren't
 # commonly available
 $(call inherit-product-if-exists, vendor/samsung/fascinatemtd/fascinatemtd-vendor.mk)
+$(call inherit-product, build/target/product/full_base.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_fascinatemtd
