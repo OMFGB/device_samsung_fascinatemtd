@@ -81,6 +81,20 @@ on fs
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
+# Permissions for lighting
+   chown system system /sys/class/leds/lcd-backlight/als
+   chown system system /sys/class/leds/lcd-backlight/pwm_mode
+   chown system system /sys/class/leds/red/blink
+   chmod 0660 /sys/class/leds/torch-flash/camera_strobe
+   chmod 0660 /sys/class/leds/torch-flash/flash_light
+   chown system system /sys/class/leds/torch-flash/camera_strobe
+   chown system system /sys/class/leds/torch-flash/flash_light
+   chown system system /sys/class/leds/spotlight/brightness
+
+# flashlight
+   chown system camera /sys/class/leds/spotlight/brightness
+   chmod 0660 /sys/class/leds/spotlight/brightness
+
 # Permissions for System Server and daemons.
     chown system system /sys/class/backlight/s5p_bl/brightness
 
