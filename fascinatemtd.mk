@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
 	libcamera \
 	libstagefrighthw
 
+# Bluetooth MAC Address
+PRODUCT_PACKAGES += \
+  bdaddr_read
+
 # apns config file
 PRODUCT_COPY_FILES += \
         device/samsung/fascinatemtd/apns-conf.xml:system/etc/apns-conf.xml
@@ -185,6 +189,9 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+PRODUCT_COPY_FILES += \
+    device/samsung/aries-common/updater_cdma.sh:updater.sh
 
 # See comment at the top of this file. This is where the other
 # half of the device-specific product definition file takes care
