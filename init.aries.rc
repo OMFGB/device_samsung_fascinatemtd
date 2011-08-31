@@ -351,10 +351,6 @@ service dumpstate /system/bin/dumpstate -s
     disabled
     oneshot
 
-service tvout /system/bin/tvoutserver
-    user system
-    group graphics
-
 service console /system/bin/sh
     console
     disabled
